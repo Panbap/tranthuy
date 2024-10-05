@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <audio id="background-music" autoplay loop>
-        <source src="cmsn.mp3" type="audio/mpeg">
-        Your browser does not support the audio tag.
-    </audio>
+    <audio id="birthdayMusic" loop muted>
+            <source src="cmsn.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
     
     <div class="container">
         <h1>Chúc Mừng Sinh Nhật!</h1>
@@ -27,5 +27,18 @@
     <div class="balloons"></div>
 
     <script src="script.js"></script>
+    <script>
+        window.onload = function() {
+            const music = document.getElementById('birthdayMusic');
+
+            // Thêm sự kiện click để phát nhạc
+            document.body.addEventListener('click', function() {
+                music.muted = false; // Bỏ tắt tiếng
+                music.play(); // Phát nhạc
+                startTyping(); // Gọi hàm để bắt đầu hiển thị lời chúc
+                document.body.removeEventListener('click', arguments.callee); // Xóa sự kiện sau khi nhạc đã phát
+            });
+        };
+    </script>
 </body>
 </html>
