@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="background-music" autoplay loop>
+        <source src="cmsn.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+    </audio>
+    
+    <div class="container">
+        <h1>Chúc Mừng Sinh Nhật!</h1>
+        <img src="SNT.jpg" alt="Birthday Person" class="birthday-img">
+        <p id="message" class="message"></p>
+        <button onclick="showMessage()">Lời Chúc tới bạn</button>
+    </div>
+
+    <div class="cake-section">
+        <img src="https://i.pinimg.com/originals/cb/fd/54/cbfd54d3c9fd2ed0a600eb6f1db00b2d.gif" alt="Birthday Cake" class="cake-img">
+    </div>
+
+    <div class="balloons"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
